@@ -1,4 +1,35 @@
-﻿@{
+﻿@using la_mia_pizzeria_static.Classes
+@model List<PizzaItem>
+@{
+
 }
 
-<h2>Ciao sono Index</h2>
+<div class="wrapper">
+
+    <table class="table table-striped align-middle">
+        <thead>
+            <tr>
+                <th scope="col"></th>
+                <th scope="col">Nome</th>
+                <th scope="col">Descrizione</th>
+                <th scope="col">Prezzo</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (PizzaItem item in Model)
+            {
+                <tr>
+                    <th scope="row">
+                        <div class="rounded-4" style="height: 8vh; aspect-ratio: 3/2; overflow:hidden">
+                            <img src="@item.Thumbnail" style="max-width:100%;">
+                        </div>
+                    </th>
+                    <td>@item.Name</td>
+                    <td>@item.Description</td>
+                    <td>@item.GetStringPrice() €</td>
+                </tr>
+
+            }
+        </tbody>
+    </table>
+</div>

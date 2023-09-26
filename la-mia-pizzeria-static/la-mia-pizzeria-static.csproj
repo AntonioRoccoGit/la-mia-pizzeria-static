@@ -7,8 +7,4 @@
     <RootNamespace>la_mia_pizzeria_static</RootNamespace>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Folder Include="wwwroot\img\" />
-  </ItemGroup>
-
 </Project>
